@@ -1,0 +1,47 @@
+<div class="form-inline">
+  
+  <div class="container-table100">
+    
+    <div class="wrap-table100">
+      <div class="table100 mb-4">
+        <div class="form-inline">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Nombre del restaurante" #restaurante>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Ciudad" #ciudad>
+            </div>
+            <div class="col">
+             <button (click)="addRestaurante(restaurante.value, ciudad.value)" class="btn btn-primary ml-2" >agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div >
+        <table>
+          <thead>
+            <tr class="table100-head">
+              <th class="column1">Restaurante</th>
+              <th class="column2">Ciudad</th>
+            </tr>
+          </thead>
+          <tbody>
+<!--             <tr>
+              <td class="column1">El Soperito</td>
+              <td class="column2">La Victoria</td>
+            </tr> -->
+              <tr *ngFor="let items of restaurantes">
+                <td class="column1">{{ items["res"] }}</td>
+                <td class="column2">{{ items["ciu"] }}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ 
